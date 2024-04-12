@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1B5B336626A6840000740F99 /* PracticeRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B336526A6840000740F99 /* PracticeRecord.swift */; };
+		1B5B336A26A6C16F00740F99 /* RadarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B336926A6C16F00740F99 /* RadarModel.swift */; };
+		1B5B336C26A6C18900740F99 /* RadarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5B336B26A6C18900740F99 /* RadarView.swift */; };
+		1B65616E26CE42C2004EBB5B /* classifier.tflite in Resources */ = {isa = PBXBuildFile; fileRef = 1B65616D26CE42C1004EBB5B /* classifier.tflite */; };
+		1B8139FE277EC4C50022C7A3 /* 03-慢速伴奏-62.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1B8139FD277EC4C40022C7A3 /* 03-慢速伴奏-62.mp3 */; };
+		1B813A00277EC9860022C7A3 /* AccompanimentPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8139FF277EC9860022C7A3 /* AccompanimentPopoverViewController.swift */; };
+		1BD00DE42B07D4C70049EA52 /* Pods_MusicPracticeModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00EC1A404F315B1901639C89 /* Pods_MusicPracticeModule.framework */; };
+		1BF102E926F0611300C14137 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BF102E826F0611300C14137 /* libc++.tbd */; };
+		AE4A769B267795F200ED7EF8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4A769A267795F200ED7EF8 /* AudioManager.swift */; };
+		AE9686AF266D8EB0003CFC40 /* ReportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9686AE266D8EB0003CFC40 /* ReportManager.swift */; };
+		AE9686B3266F5669003CFC40 /* piano.wav in Resources */ = {isa = PBXBuildFile; fileRef = AE9686B2266F5669003CFC40 /* piano.wav */; };
+		AE9686DE266F6CC5003CFC40 /* piano.sf2 in Resources */ = {isa = PBXBuildFile; fileRef = AE9686DD266F6CC5003CFC40 /* piano.sf2 */; };
+		AE97455326653AC9006A39B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97455226653AC9006A39B7 /* AppDelegate.swift */; };
+		AE97455726653AC9006A39B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97455626653AC9006A39B7 /* ViewController.swift */; };
+		AE97455A26653AC9006A39B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97455826653AC9006A39B7 /* Main.storyboard */; };
+		AE97455C26653ACA006A39B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE97455B26653ACA006A39B7 /* Assets.xcassets */; };
+		AE97455F26653ACA006A39B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE97455D26653ACA006A39B7 /* LaunchScreen.storyboard */; };
+		AE97457326653C8B006A39B7 /* PracticeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97457226653C8B006A39B7 /* PracticeViewController.swift */; };
+		AE97457626653D1D006A39B7 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97457526653D1D006A39B7 /* KeyboardView.swift */; };
+		AE97458226653FCA006A39B7 /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97458126653FCA006A39B7 /* Resource.swift */; };
+		AE97458526653FFB006A39B7 /* SheetResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97458426653FFB006A39B7 /* SheetResource.swift */; };
+		AE97458826654007006A39B7 /* PracticeList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97458726654007006A39B7 /* PracticeList.swift */; };
+		AE97458B2665409B006A39B7 /* DemoVideo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97458A2665409B006A39B7 /* DemoVideo.swift */; };
+		AE97458E26657F3E006A39B7 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE97458D26657F3E006A39B7 /* Foundation+Extension.swift */; };
+		AE9745922665801F006A39B7 /* ResourceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745912665801F006A39B7 /* ResourceManager.swift */; };
+		AE97459626658105006A39B7 /* SdkLib.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE97459526658105006A39B7 /* SdkLib.mm */; };
+		AE97459C26658162006A39B7 /* include in Resources */ = {isa = PBXBuildFile; fileRef = AE97459B26658162006A39B7 /* include */; };
+		AE9745A02665816F006A39B7 /* piano.tflite in Resources */ = {isa = PBXBuildFile; fileRef = AE97459E2665816D006A39B7 /* piano.tflite */; };
+		AE9745A12665816F006A39B7 /* libempiano.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AE97459F2665816F006A39B7 /* libempiano.a */; };
+		AE9745A826658240006A39B7 /* SdkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745A726658240006A39B7 /* SdkManager.swift */; };
+		AE9745AB266582F1006A39B7 /* LicenseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745AA266582F1006A39B7 /* LicenseManager.swift */; };
+		AE9745AF2665867A006A39B7 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745AE2665867A006A39B7 /* LoadingView.swift */; };
+		AE9745B2266589D3006A39B7 /* NavBarOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745B1266589D3006A39B7 /* NavBarOptionView.swift */; };
+		AE9745B526659D33006A39B7 /* SuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745B426659D33006A39B7 /* SuccessView.swift */; };
+		AE9745B826659D3C006A39B7 /* FailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745B726659D3C006A39B7 /* FailView.swift */; };
+		AE9745BB26659D78006A39B7 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9745BA26659D78006A39B7 /* ResultView.swift */; };
+		AE9E94F22668C30B00BA7A04 /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9E94F12668C30B00BA7A04 /* ScoreManager.swift */; };
+		AEA3E4D22688F1290009C215 /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3E4D12688F1290009C215 /* UserSettings.swift */; };
+		AEA3E4DD268918060009C215 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3E4DC268918060009C215 /* SessionManager.swift */; };
+		AEA3E4E0268918270009C215 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA3E4DF268918270009C215 /* CountdownView.swift */; };
+		AEC7A90F2683D9CB0074E7AE /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC7A90E2683D9CB0074E7AE /* UIColor+Extension.swift */; };
+		AED7F811269AFA6E00E609DE /* DemonstrationTempoSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7F80D269AFA6E00E609DE /* DemonstrationTempoSelectionViewController.swift */; };
+		AED7F812269AFA6E00E609DE /* DemonstrationPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7F80E269AFA6E00E609DE /* DemonstrationPopoverViewController.swift */; };
+		AED7F813269AFA6E00E609DE /* SettingsPopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7F80F269AFA6E00E609DE /* SettingsPopoverViewController.swift */; };
+		AED7F814269AFA6E00E609DE /* MetronomePopoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AED7F810269AFA6E00E609DE /* MetronomePopoverViewController.swift */; };
+		AEFB5AA9267FE3B00050EFA4 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFB5AA8267FE3B00050EFA4 /* ReportViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		00EC1A404F315B1901639C89 /* Pods_MusicPracticeModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusicPracticeModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B5B336526A6840000740F99 /* PracticeRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeRecord.swift; sourceTree = "<group>"; };
+		1B5B336926A6C16F00740F99 /* RadarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarModel.swift; sourceTree = "<group>"; };
+		1B5B336B26A6C18900740F99 /* RadarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadarView.swift; sourceTree = "<group>"; };
+		1B65616D26CE42C1004EBB5B /* classifier.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = classifier.tflite; sourceTree = "<group>"; };
+		1B8139FD277EC4C40022C7A3 /* 03-慢速伴奏-62.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03-慢速伴奏-62.mp3"; sourceTree = "<group>"; };
+		1B8139FF277EC9860022C7A3 /* AccompanimentPopoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccompanimentPopoverViewController.swift; sourceTree = "<group>"; };
+		1BF102E826F0611300C14137 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		1BF7C22E26D4DD6F0045F24D /* libempiano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libempiano.a; sourceTree = "<group>"; };
+		1BF7C23026D4DD6F0045F24D /* libempiano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libempiano.a; sourceTree = "<group>"; };
+		1BF7C23226D4DD6F0045F24D /* libempiano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libempiano.a; sourceTree = "<group>"; };
+		AE4A769A267795F200ED7EF8 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		AE9686AE266D8EB0003CFC40 /* ReportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportManager.swift; sourceTree = "<group>"; };
+		AE9686B2266F5669003CFC40 /* piano.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = piano.wav; sourceTree = "<group>"; };
+		AE9686DD266F6CC5003CFC40 /* piano.sf2 */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.sf2; sourceTree = "<group>"; };
+		AE97454F26653AC9006A39B7 /* MusicPracticeModule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MusicPracticeModule.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE97455226653AC9006A39B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE97455626653AC9006A39B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AE97455926653AC9006A39B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AE97455B26653ACA006A39B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE97455E26653ACA006A39B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AE97456026653ACA006A39B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE97457226653C8B006A39B7 /* PracticeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeViewController.swift; sourceTree = "<group>"; };
+		AE97457526653D1D006A39B7 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		AE97458126653FCA006A39B7 /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		AE97458426653FFB006A39B7 /* SheetResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetResource.swift; sourceTree = "<group>"; };
+		AE97458726654007006A39B7 /* PracticeList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeList.swift; sourceTree = "<group>"; };
+		AE97458A2665409B006A39B7 /* DemoVideo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoVideo.swift; sourceTree = "<group>"; };
+		AE97458D26657F3E006A39B7 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		AE9745912665801F006A39B7 /* ResourceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceManager.swift; sourceTree = "<group>"; };
+		AE97459426658105006A39B7 /* MusicPracticeModule-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusicPracticeModule-Bridging-Header.h"; sourceTree = "<group>"; };
+		AE97459526658105006A39B7 /* SdkLib.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = SdkLib.mm; sourceTree = "<group>"; };
+		AE97459826658114006A39B7 /* SdkLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SdkLib.h; sourceTree = "<group>"; };
+		AE97459B26658162006A39B7 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; path = include; sourceTree = "<group>"; };
+		AE97459E2665816D006A39B7 /* piano.tflite */ = {isa = PBXFileReference; lastKnownFileType = file; path = piano.tflite; sourceTree = "<group>"; };
+		AE97459F2665816F006A39B7 /* libempiano.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libempiano.a; sourceTree = "<group>"; };
+		AE9745A726658240006A39B7 /* SdkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SdkManager.swift; sourceTree = "<group>"; };
+		AE9745AA266582F1006A39B7 /* LicenseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicenseManager.swift; sourceTree = "<group>"; };
+		AE9745AE2665867A006A39B7 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		AE9745B1266589D3006A39B7 /* NavBarOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarOptionView.swift; sourceTree = "<group>"; };
+		AE9745B426659D33006A39B7 /* SuccessView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessView.swift; sourceTree = "<group>"; };
+		AE9745B726659D3C006A39B7 /* FailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FailView.swift; sourceTree = "<group>"; };
+		AE9745BA26659D78006A39B7 /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
+		AE9E94F12668C30B00BA7A04 /* ScoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		AEA3E4D12688F1290009C215 /* UserSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		AEA3E4DC268918060009C215 /* SessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		AEA3E4DF268918270009C215 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		AEC7A90E2683D9CB0074E7AE /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		AED7F80D269AFA6E00E609DE /* DemonstrationTempoSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemonstrationTempoSelectionViewController.swift; sourceTree = "<group>"; };
+		AED7F80E269AFA6E00E609DE /* DemonstrationPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemonstrationPopoverViewController.swift; sourceTree = "<group>"; };
+		AED7F80F269AFA6E00E609DE /* SettingsPopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsPopoverViewController.swift; sourceTree = "<group>"; };
+		AED7F810269AFA6E00E609DE /* MetronomePopoverViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MetronomePopoverViewController.swift; sourceTree = "<group>"; };
+		AEFB5AA8267FE3B00050EFA4 /* ReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		B9919E98A5A894B578C61E86 /* Pods-MusicPracticeModule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPracticeModule.debug.xcconfig"; path = "Target Support Files/Pods-MusicPracticeModule/Pods-MusicPracticeModule.debug.xcconfig"; sourceTree = "<group>"; };
+		D8830F599D739EF117473C8F /* Pods-MusicPracticeModule.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusicPracticeModule.release.xcconfig"; path = "Target Support Files/Pods-MusicPracticeModule/Pods-MusicPracticeModule.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE97454C26653AC9006A39B7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1BD00DE42B07D4C70049EA52 /* Pods_MusicPracticeModule.framework in Frameworks */,
+				1BF102E926F0611300C14137 /* libc++.tbd in Frameworks */,
+				AE9745A12665816F006A39B7 /* libempiano.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1BBAFE2026A17B41007C160D /* UI Components */ = {
+			isa = PBXGroup;
+			children = (
+				AE9745BA26659D78006A39B7 /* ResultView.swift */,
+				AED7F80E269AFA6E00E609DE /* DemonstrationPopoverViewController.swift */,
+				AED7F80D269AFA6E00E609DE /* DemonstrationTempoSelectionViewController.swift */,
+				AED7F810269AFA6E00E609DE /* MetronomePopoverViewController.swift */,
+				1B8139FF277EC9860022C7A3 /* AccompanimentPopoverViewController.swift */,
+				AED7F80F269AFA6E00E609DE /* SettingsPopoverViewController.swift */,
+				AE9745B1266589D3006A39B7 /* NavBarOptionView.swift */,
+				AE9745B426659D33006A39B7 /* SuccessView.swift */,
+				AE9745B726659D3C006A39B7 /* FailView.swift */,
+				AEA3E4DF268918270009C215 /* CountdownView.swift */,
+				AE9745AE2665867A006A39B7 /* LoadingView.swift */,
+				AE97457526653D1D006A39B7 /* KeyboardView.swift */,
+				1B5B336926A6C16F00740F99 /* RadarModel.swift */,
+				1B5B336B26A6C18900740F99 /* RadarView.swift */,
+			);
+			path = "UI Components";
+			sourceTree = "<group>";
+		};
+		1BBAFE2126A17C95007C160D /* Global Settings */ = {
+			isa = PBXGroup;
+			children = (
+				AEC7A90E2683D9CB0074E7AE /* UIColor+Extension.swift */,
+				AEA3E4D12688F1290009C215 /* UserSettings.swift */,
+				AE97458D26657F3E006A39B7 /* Foundation+Extension.swift */,
+				1B5B336526A6840000740F99 /* PracticeRecord.swift */,
+			);
+			path = "Global Settings";
+			sourceTree = "<group>";
+		};
+		1BBAFE2226A17CE2007C160D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AE9745912665801F006A39B7 /* ResourceManager.swift */,
+				AE9745AA266582F1006A39B7 /* LicenseManager.swift */,
+				AE9E94F12668C30B00BA7A04 /* ScoreManager.swift */,
+				AE9686AE266D8EB0003CFC40 /* ReportManager.swift */,
+				AE4A769A267795F200ED7EF8 /* AudioManager.swift */,
+				AEA3E4DC268918060009C215 /* SessionManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		1BF7C22C26D4DD6F0045F24D /* lib for all targets */ = {
+			isa = PBXGroup;
+			children = (
+				1BF7C22D26D4DD6F0045F24D /* iphoneos */,
+				1BF7C22F26D4DD6F0045F24D /* arm64 */,
+				1BF7C23126D4DD6F0045F24D /* iphonesimulator */,
+			);
+			path = "lib for all targets";
+			sourceTree = "<group>";
+		};
+		1BF7C22D26D4DD6F0045F24D /* iphoneos */ = {
+			isa = PBXGroup;
+			children = (
+				1BF7C22E26D4DD6F0045F24D /* libempiano.a */,
+			);
+			path = iphoneos;
+			sourceTree = "<group>";
+		};
+		1BF7C22F26D4DD6F0045F24D /* arm64 */ = {
+			isa = PBXGroup;
+			children = (
+				1BF7C23026D4DD6F0045F24D /* libempiano.a */,
+			);
+			path = arm64;
+			sourceTree = "<group>";
+		};
+		1BF7C23126D4DD6F0045F24D /* iphonesimulator */ = {
+			isa = PBXGroup;
+			children = (
+				1BF7C23226D4DD6F0045F24D /* libempiano.a */,
+			);
+			path = iphonesimulator;
+			sourceTree = "<group>";
+		};
+		34E99370E623DBFBDDD7151B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B9919E98A5A894B578C61E86 /* Pods-MusicPracticeModule.debug.xcconfig */,
+				D8830F599D739EF117473C8F /* Pods-MusicPracticeModule.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6074F706604D61B3F7CAF472 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BF102E826F0611300C14137 /* libc++.tbd */,
+				00EC1A404F315B1901639C89 /* Pods_MusicPracticeModule.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AE97454626653AC9006A39B7 = {
+			isa = PBXGroup;
+			children = (
+				AE97455126653AC9006A39B7 /* MusicPracticeModule */,
+				AE97455026653AC9006A39B7 /* Products */,
+				34E99370E623DBFBDDD7151B /* Pods */,
+				6074F706604D61B3F7CAF472 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AE97455026653AC9006A39B7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE97454F26653AC9006A39B7 /* MusicPracticeModule.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE97455126653AC9006A39B7 /* MusicPracticeModule */ = {
+			isa = PBXGroup;
+			children = (
+				AE97455226653AC9006A39B7 /* AppDelegate.swift */,
+				AE97455626653AC9006A39B7 /* ViewController.swift */,
+				AE97457226653C8B006A39B7 /* PracticeViewController.swift */,
+				AEFB5AA8267FE3B00050EFA4 /* ReportViewController.swift */,
+				AE97455826653AC9006A39B7 /* Main.storyboard */,
+				AE97455B26653ACA006A39B7 /* Assets.xcassets */,
+				AE97455D26653ACA006A39B7 /* LaunchScreen.storyboard */,
+				AE97456026653ACA006A39B7 /* Info.plist */,
+				AE9686B2266F5669003CFC40 /* piano.wav */,
+				AE9686DD266F6CC5003CFC40 /* piano.sf2 */,
+				1B8139FD277EC4C40022C7A3 /* 03-慢速伴奏-62.mp3 */,
+				AE97459426658105006A39B7 /* MusicPracticeModule-Bridging-Header.h */,
+				1BBAFE2126A17C95007C160D /* Global Settings */,
+				AE97458026653FAE006A39B7 /* JSONModel */,
+				1BBAFE2026A17B41007C160D /* UI Components */,
+				AE97459926658142006A39B7 /* SDK */,
+				1BBAFE2226A17CE2007C160D /* Managers */,
+			);
+			path = MusicPracticeModule;
+			sourceTree = "<group>";
+		};
+		AE97458026653FAE006A39B7 /* JSONModel */ = {
+			isa = PBXGroup;
+			children = (
+				AE97458126653FCA006A39B7 /* Resource.swift */,
+				AE97458426653FFB006A39B7 /* SheetResource.swift */,
+				AE97458726654007006A39B7 /* PracticeList.swift */,
+				AE97458A2665409B006A39B7 /* DemoVideo.swift */,
+			);
+			path = JSONModel;
+			sourceTree = "<group>";
+		};
+		AE97459926658142006A39B7 /* SDK */ = {
+			isa = PBXGroup;
+			children = (
+				AE97459B26658162006A39B7 /* include */,
+				AE97459526658105006A39B7 /* SdkLib.mm */,
+				AE97459F2665816F006A39B7 /* libempiano.a */,
+				AE97459E2665816D006A39B7 /* piano.tflite */,
+				1B65616D26CE42C1004EBB5B /* classifier.tflite */,
+				AE97459826658114006A39B7 /* SdkLib.h */,
+				AE9745A726658240006A39B7 /* SdkManager.swift */,
+				1BF7C22C26D4DD6F0045F24D /* lib for all targets */,
+			);
+			path = SDK;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE97454E26653AC9006A39B7 /* MusicPracticeModule */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE97456326653ACA006A39B7 /* Build configuration list for PBXNativeTarget "MusicPracticeModule" */;
+			buildPhases = (
+				8F8FE855960B4FD20F96F830 /* [CP] Check Pods Manifest.lock */,
+				AE97454B26653AC9006A39B7 /* Sources */,
+				AE97454C26653AC9006A39B7 /* Frameworks */,
+				AE97454D26653AC9006A39B7 /* Resources */,
+				1BDCF61826F5E20800298CBB /* ShellScript */,
+				172B29D181A2D049CB5ACB5C /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MusicPracticeModule;
+			productName = MusicPracticeModule;
+			productReference = AE97454F26653AC9006A39B7 /* MusicPracticeModule.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE97454726653AC9006A39B7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AE97454E26653AC9006A39B7 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+					};
+				};
+			};
+			buildConfigurationList = AE97454A26653AC9006A39B7 /* Build configuration list for PBXProject "MusicPracticeModule" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE97454626653AC9006A39B7;
+			productRefGroup = AE97455026653AC9006A39B7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE97454E26653AC9006A39B7 /* MusicPracticeModule */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE97454D26653AC9006A39B7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE97455F26653ACA006A39B7 /* LaunchScreen.storyboard in Resources */,
+				AE97455C26653ACA006A39B7 /* Assets.xcassets in Resources */,
+				1B8139FE277EC4C50022C7A3 /* 03-慢速伴奏-62.mp3 in Resources */,
+				AE9686B3266F5669003CFC40 /* piano.wav in Resources */,
+				AE97455A26653AC9006A39B7 /* Main.storyboard in Resources */,
+				1B65616E26CE42C2004EBB5B /* classifier.tflite in Resources */,
+				AE9686DE266F6CC5003CFC40 /* piano.sf2 in Resources */,
+				AE9745A02665816F006A39B7 /* piano.tflite in Resources */,
+				AE97459C26658162006A39B7 /* include in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		172B29D181A2D049CB5ACB5C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 12;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPracticeModule/Pods-MusicPracticeModule-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MusicPracticeModule/Pods-MusicPracticeModule-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MusicPracticeModule/Pods-MusicPracticeModule-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BDCF61826F5E20800298CBB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "#!/bin/sh\n#\n# Copyright 2016 Bugly, Tencent. All rights reserved.\n#\n# V1.4.0\n#\n# 2016.08.03\n#\n#\n#\n######################################################\n# 1. 脚本集成到Xcode工程的Target\n######################################################\n#\n# --- Copy the SCRIPT to the Run Script of Build Phases in the Xcode project ---\n#\n# #\nBUGLY_APP_ID=\"0104113891\"\n# #\nBUGLY_APP_KEY=\"5036e399-77ed-4e55-bfe9-4c12caf1112e\"\n# #\nBUNDLE_IDENTIFIER=\"io.stepbeats.example.MusicPractice\"\n# #\nUPLOAD_DSYM_ONLY=1\n#\n# # 脚本默认配置的版本格式为CFBundleShortVersionString(CFBundleVersion),  如果你修改默认的版本格式, 请设置此变量, 如果不想修改, 请忽略此设置\n# CUSTOMIZED_APP_VERSION=\"\"\n#\n# # Debug模式编译是否上传，1＝上传 0＝不上传，默认不上传\nUPLOAD_DEBUG_SYMBOLS=1\n#\n# # 模拟器编译是否上传，1=上传 0=不上传，默认不上传\n# UPLOAD_SIMULATOR_SYMBOLS=1\n#\n# #只有Archive操作时上传, 1=支持Archive上传 0=所有Release模式编译都上传\n# UPLOAD_ARCHIVE_ONLY=0\n#\n# #\n# source dSYMUpload.sh\n#\n# --- END OF SCRIPT ---\n#\n#\n#\n#\n#######################################################\n# 2. 脚本根据输入参数处理\n#######################################################\n#\n# #命令行下输入应用基本信息, .dSYM文件的父目录路径, 输出文件目录即可\n#\n# sh dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir>\n#\n# #\n#\n# #注意:\n# # 1. dSYMUpload.sh会调用buglySymboliOS.jar进行.dSYM解析，所以依赖Java运行时环境\n# # 2. dSYMUpload.sh和buglySymboliOS.jar的文件路径需一致\n#\n#\n\n#\n# --- CONTENT OF SCRIPT ---\n#\n\n# Bugly服务域名\nBUGLY_DSYM_UPLOAD_DOMAIN=\"api.bugly.qq.com\"\n\n# 注意jar工具的路径跟dSYMUpload.sh脚本路径一致, 请务必保证jar路径的正确性\nBUGLY_SYMBOL_JAR_PATH=\"dsymtool/buglySymboliOS.jar\"\n# 查找添加到系统目录的jar工具\nif [ ! -f \"${BUGLY_SYMBOL_JAR_PATH}\" ]; then\n    BUGLY_SYMBOL_JAR_PATH=\"$HOME/bin/buglySymboliOS.jar\"\nfi\n\n# 打印错误信息\nfunction exitWithMessage(){\n    echo \"--------------------------------\"\n    echo \"${1}\"\n    echo \"--------------------------------\"\n    exit ${2}\n}\n\n# 上传bSYMBOL文件\nfunction dSYMUpload() {\n    P_APP_ID=\"$1\"\n    P_APP_KEY=\"$2\"\n    P_APP_BUNDLE_ID=\"$3\"\n    P_APP_VERSION=\"$4\"\n    P_BSYMBOL_ZIP_FILE=\"$5\"\n\n    #\n    P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE##*/}\n    P_BSYMBOL_ZIP_FILE_NAME=${P_BSYMBOL_ZIP_FILE_NAME//&/_}\n    P_BSYMBOL_ZIP_FILE_NAME=\"${P_BSYMBOL_ZIP_FILE_NAME// /_}\"\n\n    DSYM_UPLOAD_URL=\"https://${BUGLY_DSYM_UPLOAD_DOMAIN}/openapi/file/upload/symbol?app_id=${P_APP_ID}&app_key=${P_APP_KEY}\"\n    echo \"dSYM upload url: ${DSYM_UPLOAD_URL}\"\n\n    echo \"-----------------------------\"\n    STATUS=$(/usr/bin/curl -k \"${DSYM_UPLOAD_URL}\" --form \"api_version=1\" --form \"app_id=${P_APP_ID}\" --form \"app_key=${P_APP_KEY}\" --form \"symbolType=2\"  --form \"bundleId=${BUNDLE_IDENTIFIER}\" --form \"productVersion=${BUGLY_APP_VERSION}\" --form \"fileName=${P_BSYMBOL_ZIP_FILE_NAME}\" --form \"file=@${P_BSYMBOL_ZIP_FILE}\" --verbose)\n    echo \"-----------------------------\"\n\n    UPLOAD_RESULT=\"FAILTURE\"\n    echo \"Bugly server response: ${STATUS}\"\n    if [ ! \"${STATUS}\" ]; then\n        echo \"Error: Failed to upload the zip archive file.\"\n    elif [[ \"${STATUS}\" == *\"{\\\"reponseCode\\\":\\\"0\\\"}\"* ]]; then\n        echo \"Success to upload the dSYM for the app [${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION}]\"\n        UPLOAD_RESULT=\"SUCCESS\"\n    else\n        echo \"Error: Failed to upload the zip archive file to Bugly.\"\n    fi\n\n    #Remove temp dSYM archive\n    #echo \"Remove temporary zip archive: ${DSYM_ZIP_FPATH}\"\n    #/bin/rm -f \"${DSYM_ZIP_FPATH}\"\n\n    if [ \"$?\" -ne 0 ]; then\n        exitWithMessage \"Error: Failed to remove temporary zip archive.\" 0\n    fi\n\n    echo \"--------------------------------\"\n    echo \"${UPLOAD_RESULT} - dSYM upload complete.\"\n\n    if [[ \"${UPLOAD_RESULT}\" == \"FAILTURE\" ]]; then\n        echo \"--------------------------------\"\n        echo \"Failed to upload the dSYM\"\n        echo \"Please check the script and try it again.\"\n    fi\n}\n\n# .dSYM解析为bSYMBOL文件\nfunction dSYMParse() {\n    DSYM_FILE=\"$1\"\n    DSYM_SYMBOL_FILE=\"$2\"\n\n    echo \"--------------------------------\"\n    echo \"Extract symbol info from .dSYM file. to ${DSYM_SYMBOL_FILE}\"\n    (/usr/bin/java -Xms512m -Xmx1024m -Dfile.encoding=UTF8 -jar \"${BUGLY_SYMBOL_JAR_PATH}\" -i \"${DSYM_FILE}\" -o \"${DSYM_SYMBOL_FILE}\" ) || exitWithMessage \"Error: Failed to extract symbols.\" 1\n    echo \"--------------------------------\"\n\n}\n\n# 执行\nfunction run() {\n\n    CONFIG_BUGLY_APP_ID=\"$1\"\n    CONFIG_BUGLY_APP_KEY=\"$2\"\n\n    CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER=\"$3\"\n    CONFIG_BUGLY_APP_VERSION=\"$4\"\n    CONFIG_DSYM_SOURCE_DIR=\"$5\"\n    CONFIG_DSYM_DEST_DIR=\"$6\"\n    CONFIG_UPLOAD_DSYM_ONLY=\"$7\"\n\n    # 检查必须参数是否设置\n    if [ ! \"${CONFIG_BUGLY_APP_ID}\" ]; then\n        exitWithMessage \"Error: Bugly App ID not defined. Please set 'BUGLY_APP_ID' \" 0\n    fi\n\n    if [[ \"${CONFIG_BUGLY_APP_ID}\" == *\"App ID\"* ]]; then\n        exitWithMessage \"Error: Bugly App ID not defined.\" 0\n    fi\n\n    if [ ! \"${CONFIG_BUGLY_APP_KEY}\" ]; then\n        exitWithMessage \"Error: Bugly App Key not defined.\" 0\n    fi\n\n    if [ ! \"${CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER}\" ]; then\n        exitWithMessage \"Error: Bundle Identifier not defined.\" 0\n    fi\n\n    if [ ! \"${CONFIG_BUGLY_APP_VERSION}\" ]; then\n        exitWithMessage \"Error: App Version not defined.\" 0\n    fi\n\n    if [ ! -e \"${CONFIG_DSYM_SOURCE_DIR}\" ]; then\n        exitWithMessage \"Error: Invalid dir ${CONFIG_DSYM_SOURCE_DIR}\" 0\n    fi\n\n    if [ ! \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n        exitWithMessage \"Error: Invalid dir ${CONFIG_DSYM_DEST_DIR}\" 0\n    fi\n\n    if [ ! -e \"${CONFIG_DSYM_DEST_DIR}\" ]; then\n        mkdir ${CONFIG_DSYM_DEST_DIR}\n    fi\n\n    DSYM_FOLDER=\"${CONFIG_DSYM_SOURCE_DIR}\"\n    IFS=$'\\n'\n\n    echo \"Scaning dSYM FOLDER: ${DSYM_FOLDER} ...\"\n    RET=\"F\"\n    \n    #\n    for dsymFile in $(find \"$DSYM_FOLDER\" -name '*.dSYM'); do\n        RET=\"T\"\n        echo \"Found dSYM file: $dsymFile\"\n\n        DSYM_FILE_NAME=${dsymFile##*/}\n        DSYM_SYMBOL_ZIP_FILE_NAME=\"${DSYM_FILE_NAME}.zip\"\n        DSYM_SYMBOL_ZIP_FILE_NAME=\"${DSYM_SYMBOL_ZIP_FILE_NAME// /_}\"\n        DSYM_SYMBOL_ZIP_FILE=${CONFIG_DSYM_DEST_DIR}/${DSYM_SYMBOL_ZIP_FILE_NAME}\n\n        if [ $CONFIG_UPLOAD_DSYM_ONLY -eq 1 ]; then\n            if [ -e $DSYM_SYMBOL_ZIP_FILE ]; then\n                rm -f $DSYM_SYMBOL_ZIP_FILE\n            fi\n            # 如果只上传dSYM，直接压缩dSYM目录\n            zip -r -j $DSYM_SYMBOL_ZIP_FILE $dsymFile -x *.plist\n        else\n            # 使用符号表工具来生成Symbol文件\n            dSYMParse $dsymFile $DSYM_SYMBOL_ZIP_FILE\n        fi\n        \n        # 上传\n        dSYMUpload $CONFIG_BUGLY_APP_ID $CONFIG_BUGLY_APP_KEY $CONFIG_BUGLY_APP_BUNDLE_IDENTIFIER $CONFIG_BUGLY_APP_VERSION $DSYM_SYMBOL_ZIP_FILE\n    done\n\n    if [ $RET = \"F\" ]; then\n        exitWithMessage \"No .dSYM found in ${DSYM_FOLDER}\" 0\n    fi\n}\n\n# 在Xcode工程中执行\nfunction runInXcode(){\n    echo \"Uploading dSYM to Bugly in Xcode ...\"\n\n    echo \"Info.Plist : ${INFOPLIST_FILE}\"\n\n    BUNDLE_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleVersion' \"${INFOPLIST_FILE}\")\n    BUNDLE_SHORT_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' \"${INFOPLIST_FILE}\")\n\n    # 组装Bugly默认识别的版本信息(格式为CFBundleShortVersionString(CFBundleVersion), 例如: 1.0(1))\n    if [ ! \"${CUSTOMIZED_APP_VERSION}\" ]; then\n        BUGLY_APP_VERSION=\"${BUNDLE_SHORT_VERSION}(${BUNDLE_VERSION})\"\n    else\n        BUGLY_APP_VERSION=\"${CUSTOMIZED_APP_VERSION}\"\n    fi\n\n    echo \"--------------------------------\"\n    echo \"Prepare application information.\"\n    echo \"--------------------------------\"\n\n    echo \"Product Name: ${PRODUCT_NAME}\"\n    echo \"Bundle Identifier: ${BUNDLE_IDENTIFIER}\"\n    echo \"Version: ${BUNDLE_SHORT_VERSION}\"\n    echo \"Build: ${BUNDLE_VERSION}\"\n\n    echo \"Bugly App ID: ${BUGLY_APP_ID}\"\n    echo \"Bugly App key: ${BUGLY_APP_KEY}\"\n    echo \"Bugly App Version: ${BUGLY_APP_VERSION}\"\n\n    echo \"--------------------------------\"\n    echo \"Check the arguments ...\"\n\n    ##检查模拟器编译是否允许上传符号\n    if [ \"$EFFECTIVE_PLATFORM_NAME\" == \"-iphonesimulator\" ]; then\n    if [ $UPLOAD_SIMULATOR_SYMBOLS -eq 0 ]; then\n        exitWithMessage \"Warning: Build for simulator and skipping to upload. \\nYou can modify 'UPLOAD_SIMULATOR_SYMBOLS' to 1 in the script.\" 0\n    fi\n    fi\n\n    ##检查是否是Release模式编译\n    if [ \"${CONFIGURATION=}\" == \"Debug\" ]; then\n    if [ $UPLOAD_DEBUG_SYMBOLS -eq 0 ]; then\n        exitWithMessage \"Warning: Build for debug mode and skipping to upload. \\nYou can modify 'UPLOAD_DEBUG_SYMBOLS' to 1 in the script.\" 0\n    fi\n    fi\n\n    ##检查是否Archive操作\n    if [ $UPLOAD_ARCHIVE_ONLY -eq 1 ]; then\n    if [[ \"$TARGET_BUILD_DIR\" == *\"/Archive\"* ]]; then\n        echo \"Archive the package\"\n    else\n        exitWithMessage \"Warning: Build for NOT Archive mode and skipping to upload. \\nYou can modify 'UPLOAD_ARCHIVE_ONLY' to 0 in the script.\" 0\n    fi\n    fi\n\n    #\n    run ${BUGLY_APP_ID} ${BUGLY_APP_KEY} ${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION} ${DWARF_DSYM_FOLDER_PATH} ${BUILD_DIR}/BuglySymbolTemp ${UPLOAD_DSYM_ONLY}\n}\n\n# 根据Xcode的环境变量判断是否处于Xcode环境\nINFO_PLIST_FILE=\"${INFOPLIST_FILE}\"\n\nBuildInXcode=\"F\"\nif [ -f \"${INFO_PLIST_FILE}\" ]; then\n    BuildInXcode=\"T\"\nfi\n\nif [ $BuildInXcode = \"T\" ]; then\n    runInXcode\nelse\n    echo \"\\nUsage: dSYMUpload.sh <bugly_app_id> <bugly_app_key> <app_bundle_identifier> <app_version> <dSYM_src_dir> <bSYMBOL_dest_dir> [upload_dsym_only]\\n\"\n    # 你可以在此处直接设置BuglyAppID和BuglyAppKey，排除不常变参数的输入\n    BUGLY_APP_ID=\"$1\"\n    BUGLY_APP_KEY=\"$2\"\n    BUNDLE_IDENTIFIER=\"$3\"\n    BUGLY_APP_VERSION=\"$4\"\n    DWARF_DSYM_FOLDER_PATH=\"$5\"\n    SYMBOL_OUTPUT_PATH=\"$6\"\n    UPLOAD_DSYM_ONLY=$7\n    run ${BUGLY_APP_ID} ${BUGLY_APP_KEY} ${BUNDLE_IDENTIFIER} ${BUGLY_APP_VERSION} ${DWARF_DSYM_FOLDER_PATH} ${SYMBOL_OUTPUT_PATH} ${UPLOAD_DSYM_ONLY}\nfi\n";
+		};
+		8F8FE855960B4FD20F96F830 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusicPracticeModule-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE97454B26653AC9006A39B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9745B526659D33006A39B7 /* SuccessView.swift in Sources */,
+				1B5B336626A6840000740F99 /* PracticeRecord.swift in Sources */,
+				AE9E94F22668C30B00BA7A04 /* ScoreManager.swift in Sources */,
+				AE97457326653C8B006A39B7 /* PracticeViewController.swift in Sources */,
+				AE97459626658105006A39B7 /* SdkLib.mm in Sources */,
+				AEFB5AA9267FE3B00050EFA4 /* ReportViewController.swift in Sources */,
+				1B5B336A26A6C16F00740F99 /* RadarModel.swift in Sources */,
+				AEA3E4DD268918060009C215 /* SessionManager.swift in Sources */,
+				AED7F811269AFA6E00E609DE /* DemonstrationTempoSelectionViewController.swift in Sources */,
+				AE97457626653D1D006A39B7 /* KeyboardView.swift in Sources */,
+				AED7F812269AFA6E00E609DE /* DemonstrationPopoverViewController.swift in Sources */,
+				AE97458826654007006A39B7 /* PracticeList.swift in Sources */,
+				AED7F813269AFA6E00E609DE /* SettingsPopoverViewController.swift in Sources */,
+				AE97455726653AC9006A39B7 /* ViewController.swift in Sources */,
+				AE9745B826659D3C006A39B7 /* FailView.swift in Sources */,
+				AEC7A90F2683D9CB0074E7AE /* UIColor+Extension.swift in Sources */,
+				AE9745AF2665867A006A39B7 /* LoadingView.swift in Sources */,
+				AE9686AF266D8EB0003CFC40 /* ReportManager.swift in Sources */,
+				AEA3E4E0268918270009C215 /* CountdownView.swift in Sources */,
+				AEA3E4D22688F1290009C215 /* UserSettings.swift in Sources */,
+				AE97458226653FCA006A39B7 /* Resource.swift in Sources */,
+				AED7F814269AFA6E00E609DE /* MetronomePopoverViewController.swift in Sources */,
+				1B813A00277EC9860022C7A3 /* AccompanimentPopoverViewController.swift in Sources */,
+				1B5B336C26A6C18900740F99 /* RadarView.swift in Sources */,
+				AE9745A826658240006A39B7 /* SdkManager.swift in Sources */,
+				AE9745B2266589D3006A39B7 /* NavBarOptionView.swift in Sources */,
+				AE9745BB26659D78006A39B7 /* ResultView.swift in Sources */,
+				AE97455326653AC9006A39B7 /* AppDelegate.swift in Sources */,
+				AE4A769B267795F200ED7EF8 /* AudioManager.swift in Sources */,
+				AE97458B2665409B006A39B7 /* DemoVideo.swift in Sources */,
+				AE97458E26657F3E006A39B7 /* Foundation+Extension.swift in Sources */,
+				AE9745AB266582F1006A39B7 /* LicenseManager.swift in Sources */,
+				AE97458526653FFB006A39B7 /* SheetResource.swift in Sources */,
+				AE9745922665801F006A39B7 /* ResourceManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AE97455826653AC9006A39B7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE97455926653AC9006A39B7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		AE97455D26653ACA006A39B7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AE97455E26653ACA006A39B7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AE97456126653ACA006A39B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE97456226653ACA006A39B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE97456426653ACA006A39B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B9919E98A5A894B578C61E86 /* Pods-MusicPracticeModule.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = DLYUQU3Z5W;
+				INFOPLIST_FILE = MusicPracticeModule/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Piano Real Time";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicPracticeModule/SDK",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.stepbeats.example.MusicPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicPracticeModule/MusicPracticeModule-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MusicPracticeModule/SDK/include";
+			};
+			name = Debug;
+		};
+		AE97456526653ACA006A39B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8830F599D739EF117473C8F /* Pods-MusicPracticeModule.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DLYUQU3Z5W;
+				INFOPLIST_FILE = MusicPracticeModule/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Piano Real Time";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/MusicPracticeModule/SDK",
+				);
+				MARKETING_VERSION = 1.1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = io.stepbeats.example.MusicPractice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "MusicPracticeModule/MusicPracticeModule-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/MusicPracticeModule/SDK/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE97454A26653AC9006A39B7 /* Build configuration list for PBXProject "MusicPracticeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE97456126653ACA006A39B7 /* Debug */,
+				AE97456226653ACA006A39B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE97456326653ACA006A39B7 /* Build configuration list for PBXNativeTarget "MusicPracticeModule" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE97456426653ACA006A39B7 /* Debug */,
+				AE97456526653ACA006A39B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AE97454726653AC9006A39B7 /* Project object */;
+}

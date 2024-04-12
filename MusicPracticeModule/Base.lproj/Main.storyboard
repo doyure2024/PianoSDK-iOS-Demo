@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZfB-so-71r">
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MusicPracticeModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="naH-my-jwb">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ZKd-Jg-35y">
+                                        <rect key="frame" x="0.0" y="0.0" width="896" height="326"/>
+                                        <subviews>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDa-aR-8JA">
+                                                <rect key="frame" x="0.0" y="82" width="285.5" height="162"/>
+                                            </pickerView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2t0-H4-2QO">
+                                                <rect key="frame" x="305.5" y="100" width="285" height="126"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Score URL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="75L-IL-Xhk">
+                                                        <rect key="frame" x="0.0" y="0.0" width="285" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="URL"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start Bar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zIG-VC-8Ws">
+                                                        <rect key="frame" x="0.0" y="42" width="285" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="End Bar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZAQ-nv-fzX">
+                                                        <rect key="frame" x="0.0" y="84" width="285" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Pvu-6C-8Ye">
+                                                        <rect key="frame" x="0.0" y="126" width="285" height="0.0"/>
+                                                        <subviews>
+                                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confidence (0~1)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nA4-RW-2dJ">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                            </textField>
+                                                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tolerance (0~1)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZFw-Xg-E65">
+                                                                <rect key="frame" x="0.0" y="0.0" width="0.0" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                            </textField>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="SkV-aq-caE">
+                                                <rect key="frame" x="610.5" y="89" width="285.5" height="148"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2E-ta-q6h">
+                                                        <rect key="frame" x="0.0" y="0.0" width="285.5" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Note Practicing">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapMode0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1H4-2Y-5J5"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BFH-cj-zSH">
+                                                        <rect key="frame" x="0.0" y="52" width="285.5" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Tempo Following">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapMode1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0o2-7J-mBV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0nE-xu-fgr">
+                                                        <rect key="frame" x="0.0" y="104" width="285.5" height="44"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Evaluation Mode">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapMode2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b53-qW-fjH"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OW-Sd-PeM">
+                                                        <rect key="frame" x="0.0" y="148" width="285.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Redirect stdout">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapRedirect:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JDx-5T-fko"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pqu-IO-qOF">
+                                                        <rect key="frame" x="0.0" y="148" width="285.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                        <state key="normal" title="Airdrop log">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapLog:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8wu-Gl-y2T"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ixb-Re-AJZ">
+                                                        <rect key="frame" x="0.0" y="148" width="285.5" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="Multi-walkthrough">
+                                                            <color key="titleColor" name="ThemeTint"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="didTapTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="evc-DR-2C7"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-At-Js6">
+                                        <rect key="frame" x="0.0" y="326" width="896" height="88"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Piano Real Time App uses microphone input to recognize piano practice, please enable microphone permissions." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3D-zo-7KD">
+                                                <rect key="frame" x="44" y="23.5" width="608" height="41"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" name="Secondary"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="lOK-Lp-vPc">
+                                                <rect key="frame" x="290" y="-295" width="494" height="190"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y5b-JB-fzG">
+                                                        <rect key="frame" x="0.0" y="74" width="237" height="42"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                        <state key="normal" title="流程测试"/>
+                                                        <connections>
+                                                            <action selector="didTapTest:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WL3-5l-x0O"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="hkS-wr-rEx">
+                                                        <rect key="frame" x="257" y="0.0" width="237" height="190"/>
+                                                        <subviews>
+                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="http://192.168.50.161:5502/1.xml" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BRB-Pp-zBD">
+                                                                <rect key="frame" x="0.0" y="0.0" width="237" height="34"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                                <textInputTraits key="textInputTraits"/>
+                                                                <connections>
+                                                                    <action selector="didEndEditingUrl:" destination="BYZ-38-t0r" eventType="editingChanged" id="f9W-Jd-PbZ"/>
+                                                                </connections>
+                                                            </textField>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uup-PR-RPa">
+                                                                <rect key="frame" x="0.0" y="42" width="237" height="44"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                <state key="normal" title="分句识谱"/>
+                                                                <connections>
+                                                                    <action selector="didTapMode0:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fS2-4s-3hR"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyj-1A-jXP">
+                                                                <rect key="frame" x="0.0" y="94" width="237" height="44"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                <state key="normal" title="整曲挑战"/>
+                                                                <connections>
+                                                                    <action selector="didTapMode1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yrk-gQ-CHO"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAR-1S-N3G">
+                                                                <rect key="frame" x="0.0" y="146" width="237" height="44"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                                                <state key="normal" title="评测打分"/>
+                                                                <connections>
+                                                                    <action selector="didTapMode2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7o2-DB-f9I"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" translatesAutoresizingMaskIntoConstraints="NO" id="b2i-Uw-s4L">
+                                                <rect key="frame" x="672" y="27" width="180" height="34.5"/>
+                                                <subviews>
+                                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jWi-TV-dpS">
+                                                        <rect key="frame" x="32" y="0.0" width="148" height="0.0"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="User Agreement"/>
+                                                        <connections>
+                                                            <action selector="didTapUserAgreement:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tXa-8x-yKV"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nsX-7y-PZL">
+                                                        <rect key="frame" x="50.5" y="0.0" width="129.5" height="34.5"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" title="Privacy Policy"/>
+                                                        <connections>
+                                                            <action selector="didTapPrivacyPolicy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k84-gh-CUy"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="180" id="VBn-wW-wu0"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.12588526067954306" green="0.10747720410330329" blue="0.25864780310428503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="b2i-Uw-s4L" firstAttribute="centerY" secondItem="NGG-At-Js6" secondAttribute="centerY" id="Ayi-4I-Kao"/>
+                                            <constraint firstItem="n3D-zo-7KD" firstAttribute="leading" secondItem="NGG-At-Js6" secondAttribute="leading" constant="44" id="BqG-vz-dhM"/>
+                                            <constraint firstItem="b2i-Uw-s4L" firstAttribute="leading" secondItem="n3D-zo-7KD" secondAttribute="trailing" constant="20" id="Q2u-c1-2ee"/>
+                                            <constraint firstAttribute="trailing" secondItem="b2i-Uw-s4L" secondAttribute="trailing" constant="44" id="Wzw-tO-yiz"/>
+                                            <constraint firstAttribute="height" constant="88" id="ptT-Hr-5i1"/>
+                                            <constraint firstItem="n3D-zo-7KD" firstAttribute="centerY" secondItem="NGG-At-Js6" secondAttribute="centerY" id="so8-N7-ZJw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dq9-0d-6zd">
+                                <rect key="frame" x="808" y="56" width="40" height="40"/>
+                                <color key="backgroundColor" red="0.55018350887876255" green="0.63194166881706026" blue="0.79309652309225065" alpha="0.21660760538467508" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="6bi-cV-gL7"/>
+                                    <constraint firstAttribute="height" constant="40" id="t7a-4F-KD1"/>
+                                </constraints>
+                                <color key="tintColor" red="0.1258852607" green="0.1074772041" blue="0.25864780310000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="●">
+                                    <fontDescription key="titleFontDescription" name="NotoSansOriya" family="Noto Sans Oriya" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didTapSettingsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="59o-4P-zjf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="naH-my-jwb" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="01T-VN-u94"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dq9-0d-6zd" secondAttribute="trailing" id="67x-Oh-JRt"/>
+                            <constraint firstAttribute="bottom" secondItem="naH-my-jwb" secondAttribute="bottom" id="8sd-PW-UF8"/>
+                            <constraint firstAttribute="trailing" secondItem="naH-my-jwb" secondAttribute="trailing" id="FtZ-3T-4zN"/>
+                            <constraint firstItem="Dq9-0d-6zd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="UG2-Do-GvM"/>
+                            <constraint firstItem="naH-my-jwb" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gFb-cn-9SR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="WsV-Hm-Y2Z"/>
+                    <connections>
+                        <outlet property="scorePickerView" destination="LDa-aR-8JA" id="Znn-Qg-SQH"/>
+                        <outlet property="settingsButton" destination="Dq9-0d-6zd" id="EBr-8z-LJN"/>
+                        <outlet property="textCheckPercent" destination="ZFw-Xg-E65" id="wZE-ou-dL3"/>
+                        <outlet property="textEndBar" destination="ZAQ-nv-fzX" id="4Rj-zr-3ZK"/>
+                        <outlet property="textStartBar" destination="zIG-VC-8Ws" id="cQn-6p-YhQ"/>
+                        <outlet property="textThreshold" destination="nA4-RW-2dJ" id="ijP-Ip-cF7"/>
+                        <outlet property="textXml" destination="75L-IL-Xhk" id="xch-Kl-dp8"/>
+                        <segue destination="vGg-Ez-8ZC" kind="show" identifier="ShowPractice" id="TaH-CN-GbT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="762.72321428571422" y="92.753623188405811"/>
+        </scene>
+        <!--Practice View Controller-->
+        <scene sceneID="mPS-kB-ga4">
+            <objects>
+                <viewController id="vGg-Ez-8ZC" customClass="PracticeViewController" customModule="MusicPracticeModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kPx-he-Hub">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="35M-yr-cFw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lkk-yQ-Ugo"/>
+                    <connections>
+                        <segue destination="FtZ-3p-FsD" kind="show" identifier="ShowReport" id="Qhc-Iy-RLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Tq-Lt-w2b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="763" y="945"/>
+        </scene>
+        <!--Report View Controller-->
+        <scene sceneID="zbX-jo-zxx">
+            <objects>
+                <viewController id="FtZ-3p-FsD" customClass="ReportViewController" customModule="MusicPracticeModule" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bed-Kc-CCv">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="xz4-te-W0k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="IjT-tn-skc"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gio-cI-KE4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1471" y="945"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="BFz-p8-dl0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZfB-so-71r" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bjd-8W-j1r">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9bf-63-f7O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yh2-cV-z50" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19.419642857142858" y="92.753623188405811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Secondary">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ThemeTint">
+            <color red="0.2630000114440918" green="0.22400000691413879" blue="0.52499997615814209" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

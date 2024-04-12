@@ -1,0 +1,45 @@
+PODS:
+  - Alamofire (5.8.1)
+  - AudioKit (4.11.2):
+    - AudioKit/Core (= 4.11.2)
+    - AudioKit/UI (= 4.11.2)
+  - AudioKit/Core (4.11.2)
+  - AudioKit/UI (4.11.2):
+    - AudioKit/Core
+  - Bugly (2.5.91)
+  - MBProgressHUD (1.2.0)
+  - Pitchy (3.0.0)
+  - SnapKit (5.0.1)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - AudioKit (~> 4.0)
+  - Bugly
+  - MBProgressHUD
+  - Pitchy
+  - SnapKit
+  - SwiftyJSON
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AudioKit
+    - Bugly
+    - MBProgressHUD
+    - Pitchy
+    - SnapKit
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 3ca42e259043ee0dc5c0cdd76c4bc568b8e42af7
+  AudioKit: 57cc61d708f085763a031e5c3f87adae21dc4b59
+  Bugly: afe841bba2ea6de6d432a3c125240a5e75949c55
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  Pitchy: 15407e4425b6d88fa3e7eef8927ba659fab52d7a
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: 5dc5b82f2eac7de5bbd4199a041e7c7bfee1fd01
+
+COCOAPODS: 1.11.2
