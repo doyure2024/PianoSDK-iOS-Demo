@@ -15,11 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.\
-        
+        // Override point for customization after application launch.
+        /// 在应用程序启动后覆盖自定义点
         let session = AVAudioSession.sharedInstance()
                 
         do {
+            // 录制和播放音频时使用此类别
             try session.setCategory(.playAndRecord,
                                     options: [.defaultToSpeaker])
             try session.setPreferredSampleRate(48000)

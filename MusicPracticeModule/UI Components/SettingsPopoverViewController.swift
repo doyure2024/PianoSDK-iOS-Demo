@@ -26,7 +26,7 @@ class SettingsPopoverViewController: UIViewController {
     /// UI controls
     lazy var fullLabel: UILabel = {
         let label = UILabel()
-        label.text = "Full Keyboard"
+        label.text = "虚拟键盘"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label
@@ -42,7 +42,7 @@ class SettingsPopoverViewController: UIViewController {
 
     lazy var alwayShowInstrumentPanelLabel: UILabel = {
         let label = UILabel()
-        label.text = "Always Show Keyboard"
+        label.text = "始终显示键盘"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label
@@ -58,7 +58,7 @@ class SettingsPopoverViewController: UIViewController {
 
     lazy var metronomeAlwaysOnLabel: UILabel = {
         let label = UILabel()
-        label.text = "Default Metronome On"
+        label.text = "默认节拍器"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label
@@ -74,7 +74,7 @@ class SettingsPopoverViewController: UIViewController {
     
     lazy var coinAnimationLabel: UILabel = {
         let label = UILabel()
-        label.text = "Score Animation"
+        label.text = "测评动画"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label
@@ -90,7 +90,7 @@ class SettingsPopoverViewController: UIViewController {
     
     lazy var scrollHorizontallyLabel: UILabel = {
         let label = UILabel()
-        label.text = "Horizontal Score"
+        label.text = "横向显示曲谱"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label

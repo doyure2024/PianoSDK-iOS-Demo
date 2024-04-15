@@ -614,7 +614,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    /// Update UI.
+    /// Update UI. 修改ui
     func updateUI(withUIUpdated needUIUpdation: Bool = true) {
         if let url = urlToLoad, let start = startBar, let end = endBar {
             /// Load sheet.
@@ -765,7 +765,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    /// Parse resources.
+    /// Parse resources.分析资源
     func parseResource(withUIUpdated needUIUpdation: Bool = true) {
         if sessionManager.defaultMetronomeOn {
             sessionManager.isMetronomeOn = true
@@ -780,10 +780,10 @@ class PracticeViewController: UIViewController {
                     startBar = currentPracticeList.startBar
                     endBar = currentPracticeList.endBar
                     hand = currentPracticeList.hand
-                    let handString = hand == 0 ? "Both Hands" : (hand == 1 ? "Right Hand" : "Left Hand")
+                    let handString = hand == 0 ? "双手" : (hand == 1 ? "Right Hand" : "Left Hand")
                     let mode = currentPracticeList.mode
                     currentMode = mode
-                    let modeString = mode == 0 ? "Note Practicing" : (mode == 1 ? "Challenge" : "Evaluation")
+                    let modeString = mode == 0 ? "曲谱练习" : (mode == 1 ? "挑战" : "测评")
                     sheetName = currentPracticeList.sheetName + currentPracticeList.sectionName + "（" + handString + modeString + "）No. \(resourceManager.currentPracticeTime + 1)"
                     print("[INFO]", sheetName, currentMode, urlToLoad, startBar, endBar)
                     if needUIUpdation {
@@ -877,7 +877,7 @@ class PracticeViewController: UIViewController {
     @objc func didTapSkipNote() {
         if !isStarted {
             let hud = MBProgressHUD.showAdded(to: view.self, animated: true)
-            hud.label.text = "Please press start first."
+            hud.label.text = "请先按开始"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 hud.hide(animated: true)
             }
@@ -892,7 +892,7 @@ class PracticeViewController: UIViewController {
         /// Determine whether it is in practice or demonstration mode.
         if !sessionManager.isInDemonstrationMode {
             /// If in practice mode, then a pop-up will prompt whether a restart is needed.
-            let alert = UIAlertController(title: "You're practising right now", message: "Do you want to restart?", preferredStyle: .alert)
+            let alert = UIAlertController(title: "你现在正在练习", message: "是否要重新启动?", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
             alert.addAction(UIAlertAction(title: "Restart", style: UIAlertAction.Style.default, handler: {_ in
                 self.sessionManager.stopTimer()
@@ -1036,7 +1036,7 @@ class PracticeViewController: UIViewController {
                             }
                             if isEmpty {
                                 let hud = MBProgressHUD.showAdded(to: strongSelf.view, animated: true)
-                                hud.label.text = "The music score format is incorrect, please choose another score."
+                                hud.label.text = "乐谱格式不正确，请选择其他乐谱。"
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                                     hud.hide(animated: true)
                                     strongSelf.navigationController?.popViewController(animated: true)
@@ -1129,7 +1129,7 @@ class PracticeViewController: UIViewController {
         }
     }
         
-    /// Create a new practice record.
+    /// Create a new practice record.创建新的练习记录
     func createNewPracticeRecord() {
         practiceRecord = PracticeRecord()
         practiceRecord.uuid = resourceManager.resource?.practiceList[resourceManager.currentPracticeListIndex].uuid
@@ -1485,6 +1485,7 @@ extension PracticeViewController: LibDelegate {
             */
             
             /// If all notes have been played, consider the practice completed
+            // 如果所有音符都已演奏完毕，则认为练习已完成
             if self.currentCount >= self.noteCount {
                 self.sessionManager.stop()
                 self.view.bringSubviewToFront(self.blackView)
@@ -1548,12 +1549,14 @@ extension PracticeViewController: LibDelegate {
     }
     
     /// In whole song challenge or evaluation scoring mode, repeatedly call the following method for note recognition
+    // 在整首歌挑战或评估评分模式下，重复调用以下方法进行音符识别
     func keys(keys: [Int]) {
         if !(currentMode == 1 || currentMode == 2) {
             return
         }
         if self.currentCount >= self.noteCount {
             /// If all notes have been played, consider the practice completed
+            // 如果所有音符都已演奏完毕，则认为练习已完成
             
             sessionManager.stopTimer()
             currentCount = 0
@@ -1609,6 +1612,7 @@ extension PracticeViewController: LibDelegate {
             }
             
             /// Complete practice recording and return
+            // 完成练习记录并返回
             endPracticeRecord(withStatus: true)
             postPracticeRecordToServer()
             return
@@ -1616,6 +1620,7 @@ extension PracticeViewController: LibDelegate {
             
         /// The following code is for recognizing notes that have not yet been completed.
         /// 128 ms interval per call
+        /// 以下代码用于识别尚未完成的注释。每次呼叫间隔128毫秒
         calledTimes += 1
         accumulatedKeys += keys
         
@@ -1640,6 +1645,7 @@ extension PracticeViewController: LibDelegate {
                 previousTarget = scoreManager.score!.notes[max(currentCount - 1, 0)].map { $0.hand == self.hand ? $0.key! : -1 }
                 previous2Target = scoreManager.score!.notes[max(currentCount - 2, 0)].map { $0.hand == self.hand ? $0.key! : -1 }
             }
+            // 着色上一个音符
             if needToColorPreviousNote {
                 needToColorPreviousNote = false
                 var result = false
@@ -1670,6 +1676,7 @@ extension PracticeViewController: LibDelegate {
     }
     
     /// Processing of model output results and accumulation of notes within the same time period
+    /// 处理输出模式结果和同一时间段内的累积音符
     func checkResult(_ result: [Int], target: [Int]) -> Bool {
         
         var resultSet = Set(result)
@@ -1699,6 +1706,7 @@ extension PracticeViewController: LibDelegate {
 }
 
 /// Delegate methods for popup window after individual practice ends
+// 练习结束后弹出窗口
 extension PracticeViewController: ResultViewDelegate {
     /// Tap [Try Again]
     func didTapTryAgain() {
@@ -1761,10 +1769,10 @@ extension PracticeViewController: NavBarOptionDelegate {
             return
         }
         
-        /// If the practice is in progress, it needs to be paused before making changes to the settings
+        /// If the practice is in progress, it needs to be paused before making changes to the settings 如果练习正在进行中，则在更改设置之前需要暂停
         if isStarted && sender.type != .restartPracticeOrDemonstration {
             let hud = MBProgressHUD.showAdded(to: view.self, animated: true)
-            hud.label.text = "The practice has begun, please proceed after stopping."
+            hud.label.text = "练习已经开始，请停止后继续练习。"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
                 hud.hide(animated: true)
             }
@@ -1811,11 +1819,11 @@ extension PracticeViewController: NavBarOptionDelegate {
     }
 }
 
-/// Delegate methods for demonstration tempo selection page
+/// Delegate methods for demonstration tempo selection page演示节奏选择页面的代表方法
 extension PracticeViewController: DemonstrationTempoSelectionViewDelegate {
     /// Select tempo
     func demoTempoSelected(to tempo: Double) {
-        /// If in demonstration mode, need to pause the web score playback first
+        /// If in demonstration mode, need to pause the web score playback first如果处于演示模式，则需要先暂停网络乐谱播放
         self.webView.evaluateJavaScript("stopPlay()") { [weak self] (result, error) in
             if let strongSelf = self {
                 print("stopped playing")
@@ -1826,7 +1834,7 @@ extension PracticeViewController: DemonstrationTempoSelectionViewDelegate {
         }
     }
     
-    /// Turn off demonstration
+    /// Turn off demonstration关闭演示
     func offSelected() {
         self.webView.evaluateJavaScript("stopPlay()") { [weak self] (result, error) in
             if let strongSelf = self {
@@ -1843,7 +1851,7 @@ extension PracticeViewController: DemonstrationTempoSelectionViewDelegate {
     }
 }
 
-/// Popover page delegate
+/// Popover page delegate弹出页面代理
 extension PracticeViewController: UIPopoverPresentationControllerDelegate {
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none

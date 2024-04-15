@@ -18,7 +18,7 @@ class ResourceManager: NSObject {
     var currentPracticeListIndex = 0
     var currentPracticeTime = 0
     
-    /// Load resource
+    /// Load resource加载资源
     func loadResource(from json: JSON) {
         currentPracticeListIndex = 0
         currentPracticeTime = 0

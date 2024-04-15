@@ -7,7 +7,7 @@
 
 import UIKit
 
-/// Interface for loading process
+/// Interface for loading process 加载过程页面
 class LoadingView: UIView {
 
     /*

@@ -14,7 +14,7 @@ class AccompanimentPopoverViewController: UIViewController {
         
     lazy var accompanimentLabel: UILabel = {
         let label = UILabel()
-        label.text = "Accompaniment"
+        label.text = "伴奏"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label

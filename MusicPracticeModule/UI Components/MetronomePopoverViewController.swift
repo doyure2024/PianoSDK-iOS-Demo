@@ -15,7 +15,7 @@ class MetronomePopoverViewController: UIViewController {
     
     lazy var speedLabel: UILabel = {
         let label = UILabel()
-        label.text = "Tempo"
+        label.text = "拍子"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label
@@ -23,7 +23,7 @@ class MetronomePopoverViewController: UIViewController {
     
     lazy var metronomeLabel: UILabel = {
         let label = UILabel()
-        label.text = "Metronome"
+        label.text = "节拍器"
         label.font = .systemFont(ofSize: 12, weight: .semibold)
         label.textColor = .themeTint
         return label

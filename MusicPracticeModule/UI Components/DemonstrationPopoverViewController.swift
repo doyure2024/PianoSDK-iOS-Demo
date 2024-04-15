@@ -59,9 +59,9 @@ extension DemonstrationPopoverViewController: UITableViewDelegate, UITableViewDa
         cell.textLabel?.textColor = .themeTint
         cell.textLabel?.font = .systemFont(ofSize: 12, weight: .semibold)
         if indexPath.row == 0 {
-            cell.textLabel?.text = "Score Playing"
+            cell.textLabel?.text = "演奏曲谱"
         } else {
-            cell.textLabel?.text = "Demo Video"
+            cell.textLabel?.text = "演示视频"
         }
         return cell
     }

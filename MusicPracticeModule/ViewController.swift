@@ -79,7 +79,7 @@ class ViewController: UIViewController {
             return
         }
         let hud = MBProgressHUD.showAdded(to: view.self, animated: true)
-        hud.label.text = "Loading course list..."
+        hud.label.text = "正在加载课程列表。。。"
         AF.request("https://small.kingcyk.com/demo.json").response { (response) in  // 192.168.50.161:5501/demo3.json
             if let data = response.data, let json = try? JSON(data: data) {
                 self.resourceManager.loadResource(from: json)
@@ -89,55 +89,56 @@ class ViewController: UIViewController {
         }
     }
     
-    /// Get license
+    /// Get license获取许可证
     func getLicense() {
         AF.request("https://license.enjoymusic.ai/vendor/hHw2GKaYZY1cJY3f").response { (response) in
             if let data = response.data, let license = String(data: data, encoding: .utf8) {
-                self.licenseManager.setLicense(license)
+                self.licenseManager.setLicense(license) // 设置许可证
                 self.showPractice()
                 self.setThresholds()
             }
         }
     }
-    
+    // 显示训练
     func showPractice() {
         SessionManager.shared.startAudioEngine()
         MBProgressHUD.hide(for: view.self, animated: true)
         performSegue(withIdentifier: "ShowPractice", sender: self)
     }
-    
+    // 检查可用音频
     func checkAudioAvailable() -> Bool {
         if AVAudioSession().isOtherAudioPlaying {
-            let alert = UIAlertController(title: "Other applications are currently using the audio.", message: "Please close the relevant applications before starting.", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Done", style: UIAlertAction.Style.cancel, handler: nil))
+            let alert = UIAlertController(title: "其他应用程序当前正在使用该音频。", message: "启动前请关闭相关应用程序.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "确认", style: UIAlertAction.Style.cancel, handler: nil))
             self.present(alert, animated: true, completion: nil)
             return false
         }
         return true
     }
-    
+    // 识谱模式
     @IBAction func didTapMode0(_ sender: UIButton) {
         testInputMode = 0
         startCustomizedTest()
     }
-    
+    // 速度跟随（节奏）
     @IBAction func didTapMode1(_ sender: UIButton) {
         testInputMode = 1
         startCustomizedTest()
     }
-    
+    // 测评模式
     @IBAction func didTapMode2(_ sender: UIButton) {
         testInputMode = 2
         startCustomizedTest()
     }
-        
+    // 启动自定义测试
     func startCustomizedTest() {
+        // 检测是否支持音频
         if !checkAudioAvailable() {
             return
         }
         let testInputUrl = textXml?.text ?? "";
         if (testInputUrl.count == 0) {
-            let alert = UIAlertController(title: "Hint", message: "Please enter the configuration XML address.", preferredStyle: .alert);
+            let alert = UIAlertController(title: "提示", message: "请输入配置XML地址.", preferredStyle: .alert);
             
             let okAction = UIAlertAction(
                     title: "Done",
@@ -159,7 +160,7 @@ class ViewController: UIViewController {
         end = end.count == 0 ? "0" : end;
         
         let hud = MBProgressHUD.showAdded(to: view.self, animated: true)
-        hud.label.text = "Loading course list..."
+        hud.label.text = "加载课程列表..."
         
         let testString = """
         {
@@ -224,7 +225,7 @@ class ViewController: UIViewController {
     }
     
     func showSettingsPopup() {
-        let alert = UIAlertController(title: "Show More Options", message: "\n\n\n", preferredStyle: .alert) // Add new lines to increase alert height
+        let alert = UIAlertController(title: "显示更多选项", message: "\n\n\n", preferredStyle: .alert) // Add new lines to increase alert height
         
         let switchView = UISwitch(frame: .zero)
         switchView.onTintColor = UIColor.secondaryTint

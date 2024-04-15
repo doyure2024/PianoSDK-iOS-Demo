@@ -61,21 +61,21 @@ class NavBarOptionView: UIView {
         var title: String {
             switch self {
             case .metronome:
-                return "Metronome"
+                return "节拍器"
             case .accompaniment:
-                return "Accompaniment"
+                return "伴奏"
             case .restartPracticeOrDemonstration:
-                return "Restart"
+                return "重新开始"
             case .demonstration:
-                return "Demo"
+                return "演示"
             case .settings:
-                return "Settings"
+                return "设置"
             case .leftHand:
-                return "Left"
+                return "左手"
             case .rightHand:
-                return "Right"
+                return "右手"
             case .skipNote:
-                return "Skip"
+                return "跳过"
             }
         }
     }

@@ -9,12 +9,12 @@ import UIKit
 import SwiftyJSON
 import Pitchy
 
-/// Score Manager
+/// Score Manager乐谱处理器
 class ScoreManager: NSObject {
     static let shared = ScoreManager()
     var score: Score?
     
-    /// Loading sheet music for SDK
+    /// Loading sheet music for SDK 加载SDK的乐谱
     func getSdkScore(hand: Int) -> String? {
         if let score = score {
             var result = JSON()
@@ -41,7 +41,7 @@ class ScoreManager: NSObject {
         }
     }
     
-    /// Handling of left and right hand in sheet music
+    /// Handling of left and right hand in sheet music 乐谱中左右手的处理
     func getHandScore(hand: Int, bpm: Double = 90) -> Score? {
         if let score = score {
             let result = Score()
