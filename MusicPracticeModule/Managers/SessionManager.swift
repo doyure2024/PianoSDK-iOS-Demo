@@ -24,8 +24,8 @@ class SessionManager: NSObject {
     var isSdkReady = false
     var isStarted = false
     var isInDemonstration = false
-    var isMetronomeOn = false
-    var isAccompanimentOn = false
+    var isMetronomeOn = false // 节拍器是否开启
+    var isAccompanimentOn = false // 伴奏是否开启
     var handsForDemoPerformance = HandsForDemonstration.full
     var isInDemonstrationMode = false
     var timer: Timer?
@@ -64,7 +64,7 @@ class SessionManager: NSObject {
         }
     }
     
-    /// Start the practice
+    /// Start the practice 开始练习
     func start() {
         isStarted = true
     }

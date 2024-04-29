@@ -23,7 +23,7 @@ class PracticeViewController: UIViewController {
     /// Score Manager.
     let scoreManager = ScoreManager.shared
     
-    /// Process Manager.
+    /// Process Manager.流程管理器
     let sessionManager = SessionManager.shared
     
     /// Timeline-related.
@@ -189,6 +189,7 @@ class PracticeViewController: UIViewController {
     var startBar: Int?
     var endBar: Int?
     var sheetName: String?
+    /// 模式：0识谱、1节奏、2测评
     var currentMode: Int? {
         didSet {
             backgroudImageView.image = UIImage(named: "Mode\(currentMode ?? 0)Bg")
@@ -446,7 +447,7 @@ class PracticeViewController: UIViewController {
         }
     }
     
-    /// Click on the bottom right [Start] button.
+    /// Click on the bottom right [Start] button. 单击右下角的[Start]按钮。
     @objc func didTapStartButton() {
         if numeratorList.isEmpty {
             print("Numerator empty!")
@@ -455,14 +456,14 @@ class PracticeViewController: UIViewController {
         skipNoteButton.isHidden = true
         accumulatedTime = 0
         if !isStarted && !isCountingDown {
-            /// Determine whether it is the first time to start the whole process.
+            /// Determine whether it is the first time to start the whole process. 确定这是否是第一次开始整个过程。
             if sessionManager.isFirstStart {
                 sessionManager.isFirstStart = false
             }
             startDate = Date()
             sdkManager.lastMetDate = startDate
                         
-            /// Adjustment of keyboard display.
+            /// Adjustment of keyboard display.显示键盘
             DispatchQueue.main.async { [self] in
                 for note in 24..<112 {
                     self.keyboardView.programmaticNoteOff(note)
@@ -472,22 +473,26 @@ class PracticeViewController: UIViewController {
             
             startButton.setTitle("Stop", for: .normal)
 //            sdkManager.setMode(mode: (currentMode == 1 ? 1 : 0))
-            /// Judging the current mode.
+            /// Judging the current mode.判断当前模式
+            /// 模式：0识谱、1节奏、2测评
             if currentMode != 0 {
-                /// Full song or evaluation scoring mode.
-                /// Countdown function of walking the spectrum at a fixed speed.
+                /// Full song or evaluation scoring mode. 全曲或评估评分模式
+                /// Countdown function of walking the spectrum at a fixed speed. 以固定速度走曲谱的倒计时功能。
+                print("--倒计时开始-- \(self.isCountingDown) - 时间 -- \(startDate)")
                 countdownView = CountdownView {
+                    // 是否开启倒计时
                     if self.isCountingDown {
-                        self.noteCorrectWrongList?.removeAll()
-                        self.currentCount = 0
-                        self.isStarted = true
-                        self.isCountingDown = false
-                        self.sessionManager.start()
-                        if !self.sessionManager.isMetronomeOn {
-                            self.sessionManager.stopMetronome()
+                        self.noteCorrectWrongList?.removeAll() // 弹错音符列表
+                        self.currentCount = 0 // 当前计数
+                        self.isStarted = true // 已开始
+                        self.isCountingDown = false // 否
+                        self.sessionManager.start() // 开启缓存管理
+                        if !self.sessionManager.isMetronomeOn { // 节拍器是否关闭
+                            self.sessionManager.stopMetronome() // 停止练习节拍器
                         }
                     }
                 }
+                // 计时器跑秒
                 countdownView.timerSecond = numeratorList[0].0 > 2 ? numeratorList[0].0 : numeratorList[0].0 * 2
                 sessionManager.audioManager.metronome.subdivision = numeratorList[0].0
                 webView.isUserInteractionEnabled = false
@@ -497,18 +502,21 @@ class PracticeViewController: UIViewController {
                     make.center.equalToSuperview()
                 }
                 self.view.bringSubviewToFront(countdownView)
+                // 倒计时bgm
                 countdownView.countdown(in: Double(metronomeSpeed) * Double(numeratorList[0].1) / 4)
                 isCountingDown = true
+                print("--倒计时结束 isCountingDown：\(isCountingDown) bgm--\(startDate) --时间-\(Date()) ")
+                // 重启节拍器
                 sessionManager.restartMetronome(bpm: Double(metronomeSpeed) * Double(numeratorList[0].1) / 4)
-                
+                // 伴奏是否开启
                 if sessionManager.isAccompanimentOn {
                     sessionManager.startAccompaniment(from: 9.0 - Double(countdownView.timerSecond))
                 }
                 
-                /// Create a new practice record.
+                /// Create a new practice record. 创建新的练习记录
                 createNewPracticeRecord()
             } else {
-                /// Start recognizing in sentence recognition mode.
+                /// Start recognizing in sentence recognition mode. 开始曲谱识别模式
                 self.isStarted = true
                 self.sessionManager.start()
                 
@@ -516,6 +524,7 @@ class PracticeViewController: UIViewController {
                 createNewPracticeRecord()
             }
         } else if isCountingDown {
+            // 是否开启倒计时
             self.isCountingDown = false
             sessionManager.stopTimer()
             self.view.sendSubviewToBack(countdownView)
@@ -527,7 +536,7 @@ class PracticeViewController: UIViewController {
             isStarted = false
             startButton.alpha = 0.5
             startButton.isEnabled = false
-            tryAgain()
+            tryAgain() // 再试一次
         } else {
             if !showInstrumentPanel {
                 keyboardView.isHidden = true
@@ -583,7 +592,7 @@ class PracticeViewController: UIViewController {
                 self.moveToNext(0)
             }
                         
-            /// Control the accumulated time to maintain the synchronization of the recognition timeline.
+            /// Control the accumulated time to maintain the synchronization of the recognition timeline. 控制累积时间以保持识别时间线的同步
             accumulatedTime += min
         }
         isCheckingTimeInterval = false
@@ -856,7 +865,7 @@ class PracticeViewController: UIViewController {
         self.tryAgain()
     }
     
-    /// Operations at the resource level to restart.
+    /// Operations at the resource level to restart.要重新启动的资源级别的操作
     func tryAgain(withUIUpdated needUIUpdation: Bool = true) {
         if sessionManager.isInDemonstrationMode {
             sessionManager.stopDemonstration()
@@ -869,11 +878,11 @@ class PracticeViewController: UIViewController {
             sessionManager.stopTimer()
             parseResource(withUIUpdated: needUIUpdation)
         }
-        /// Update the timestamp.
+        /// Update the timestamp. 更新时间戳
         sdkManager.lastMetDate = Date()
     }
     
-    /// Click the [Skip this sound] button.
+    /// Click the [Skip this sound] button. 单击[跳过此音符]按钮。
     @objc func didTapSkipNote() {
         if !isStarted {
             let hud = MBProgressHUD.showAdded(to: view.self, animated: true)
@@ -887,7 +896,7 @@ class PracticeViewController: UIViewController {
         targetMet()
     }
     
-    /// Click the [Restart] button.
+    /// Click the [Restart] button.点击【重新开始】按钮
     func didTapRestart() {
         /// Determine whether it is in practice or demonstration mode.
         if !sessionManager.isInDemonstrationMode {
@@ -1064,7 +1073,7 @@ class PracticeViewController: UIViewController {
                                     for numeratorAndDenominator in allNumeratorAndDenominators {
                                         let numerator =  numeratorAndDenominator["numerator"].intValue
                                         let denominator =  numeratorAndDenominator["denominator"].intValue
-
+                                        // 解析并记录曲谱的音列表
                                         strongSelf.numeratorList.append((numerator, denominator))
                                     }
                                     if strongSelf.hand != 0 && strongSelf.currentMode == 0 {
@@ -1455,7 +1464,7 @@ extension PracticeViewController: LibDelegate {
         }
     }
     
-    /// In phrase recognition mode, called after recognition is correct.
+    /// In phrase recognition mode, called after recognition is correct.在识谱模式下，调用后识别是否正确
     func targetMet() {
         DispatchQueue.main.async { [self] in
             skipNoteButton.isHidden = true

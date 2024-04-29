@@ -1,13 +1,13 @@
 //
 //  CountdownView.swift
 //  MusicPracticeModule
-//
+// 倒计时视图
 //  Created by kingcyk on 6/28/21.
 //
 
 import UIKit
 
-/// Countdown view in fixed speed mode
+/// Countdown view in fixed speed mode 节奏模式下的倒计时视图
 class CountdownView: UIView {
     
     lazy var timeLabel: UILabel = {
@@ -51,12 +51,13 @@ class CountdownView: UIView {
     }
     
     func countdown(in bpm: Double) {
+        /// 定义一个定时器对象，并设置执行的时间间隔为1s，定时执行的任务代码位于尾部的闭包之中。
         timer = Timer.scheduledTimer(withTimeInterval: 60.0 / Double(bpm), repeats: true) { (timer) in
             self.timerSecond -= 1
             if self.timerSecond == 0 {
-                timer.invalidate()
-                self.completion()
-                self.removeFromSuperview()
+                timer.invalidate() // 停止并删除这个计时器
+                self.completion() // 完成计时器
+                self.removeFromSuperview() // 删除计时器view
                 NotificationCenter.default.post(name: .EMCountDownFinished, object: nil)
                 
             } else {

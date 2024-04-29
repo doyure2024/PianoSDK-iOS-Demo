@@ -13,5 +13,5 @@ var showInstrumentPanel = true
 var coinAnimationOn = true
 var metronomeSpeed = 90.0
 var scrollHorizontally = false
-var modelThreshold: Float = 0.45
-var checkPercent: Float = 0.57
+var modelThreshold: Float = 0.45 /// 低阈值
+var checkPercent: Float = 0.57 /// 检测百分比

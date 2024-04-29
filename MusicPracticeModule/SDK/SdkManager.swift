@@ -127,33 +127,33 @@ class SdkManager: NSObject {
         let pointer = UnsafeMutablePointer<Float>.allocate(capacity: buffer.count)
         pointer.initialize(from: buffer, count: buffer.count)
         
-        /// Usage of SDK modes: 0 - Recognition, 1 - Followed play, 2 - Free play.
+        /// SDK模式：0-识谱模式，1-节奏跟随，2-测评
         switch currentMode {
-        case 0:
-            let currentDate = Date()
-            if lib.shouldGoNext(pointer, andLength: 2048) {
-                if Date().timeIntervalSince(startDate) > 0 {
-                    lastMetDate = currentDate
-                    delegate?.targetMet()
+            case 0:
+                let currentDate = Date()
+                if lib.shouldGoNext(pointer, andLength: 2048) {
+                    if Date().timeIntervalSince(startDate) > 0 {
+                        lastMetDate = currentDate
+                        delegate?.targetMet()
+                    }
                 }
-            }
-            if currentDate.timeIntervalSince(lastMetDate) > 5 {
-                delegate?.notMetForALongTime()
-            }
-            // print("Real-time rate", Date().timeIntervalSince(currentDate) / 0.112)
-            
-        case 1:
-            let hostTime = Int32(Date().timeIntervalSince(startDate) * 1000)
-            if let result = lib.keys(atHostTime: pointer, length: 2048, andHostTime: hostTime) as? [Int] {
-                delegate?.keys(keys: result)
-            }
-        case 3:
-            if let result = lib.compute(pointer, length: 2048) as? [Int] {
-                /// Recognition of sound used for calibration
-                calibrateDelegate?.keysForCalibrate(keys: result)
-            }
-        default:
-            break
+                if currentDate.timeIntervalSince(lastMetDate) > 5 {
+                    delegate?.notMetForALongTime()
+                }
+                // print("Real-time rate", Date().timeIntervalSince(currentDate) / 0.112)
+                
+            case 1:
+                let hostTime = Int32(Date().timeIntervalSince(startDate) * 1000)
+                if let result = lib.keys(atHostTime: pointer, length: 2048, andHostTime: hostTime) as? [Int] {
+                    delegate?.keys(keys: result)
+                }
+            case 3:
+                if let result = lib.compute(pointer, length: 2048) as? [Int] {
+                    /// Recognition of sound used for calibration
+                    calibrateDelegate?.keysForCalibrate(keys: result)
+                }
+            default:
+                break
         }
         isRunningModel = false
     }

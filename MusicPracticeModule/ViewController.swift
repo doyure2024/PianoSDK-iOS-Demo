@@ -16,11 +16,12 @@ class ViewController: UIViewController {
     
     let resourceManager = ResourceManager.shared
     let licenseManager = LicenseManager.shared
-    var testInputMode = 0
+    var testInputMode = 0 // 模式：0识谱、1节奏、2测评
     
     // Song list
-    let items = ["Fur Elise", "Always With Me", "Summer", "Castle in the Sky"]
+    let items = ["jiezou", "Fur Elise", "Always With Me", "Summer", "Castle in the Sky"]
     let scoreUrls: [String: String] = [
+        "jiezou": "https://static.doyure.com/dmapi/main_task/xml/4/1.mxl",
         "Fur Elise": "https://small.kingcyk.com/Fur_Elise.xml",
         "Always With Me": "https://small.kingcyk.com/Always_With_Me.xml",
         "Summer": "https://small.kingcyk.com/Summer.xml",
@@ -47,7 +48,7 @@ class ViewController: UIViewController {
         }
     }
     
-    /// Test entrance
+    /// Test entrance 测试入口
     @IBAction func didTapTest(_ sender: Any) {
         startTest()
     }
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
         settingsButton.clipsToBounds = true
     }
 
-    /// Start testing
+    /// Start testing 开始测试      
     func startTest() {
         if !checkAudioAvailable() {
             return
@@ -193,7 +194,7 @@ class ViewController: UIViewController {
         self.getLicense()
     }
     
-    /// Set thresholds
+    /// Set thresholds 设置阈值
     func setThresholds() {
         if let floatNumber = Float(textThreshold.text!) {
             modelThreshold = max(min(floatNumber, 1.0), 0.0)
